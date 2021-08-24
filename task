@@ -1,0 +1,38 @@
+compare two obj prop
+
+var obj1 = { name: "Person 1", age:5 };
+var obj2 = { age:5, name: "Person 1" };
+
+if(obj1.name===obj2.name && obj1.age===obj2.age){
+    console.log("array has same prorpertirs")
+}else{
+// if(obj1.age===obj2.age)
+// {
+//     console.log("age are same")
+// }else{
+    console.log("nothing matches")
+}
+
+
+print countries name, region, sub region and population , the country flags in console
+
+var xhr = new XMLHttpRequest();
+          xhr.open("GET", "https://restcountries.eu/rest/v2/all");
+          xhr.onload = function() {
+              var a = JSON.parse(this.response);
+              foo(a);
+          };
+          xhr.onerror = function() {
+              console.log('errer', this.statusText);
+          };
+          xhr.send();
+
+
+
+        function foo(values) {
+              console.log(values[104].name);
+              console.log(values[104].region);
+              console.log(values[104].subregion);
+              console.log(values[104].population);
+              console.log(values[104].flag);
+            }
